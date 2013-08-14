@@ -51,7 +51,7 @@ github "libpng",         "1.0.0" # use for php
 github "wget",           "1.0.0" # via homebrew
 github "zsh",            "1.0.0" # via homebrew
 github "heroku",         "2.0.0"
-github "mysql",          "1.1.0" # it is not via homebrew?
+github "mysql",          "1.1.0" # via homebrew
 github "postgresql",     "2.0.0" # via homebrew
 github "phantomjs",      "2.0.2" # via homebrew
 github "imagemagick",    "1.2.0" # via homebrew

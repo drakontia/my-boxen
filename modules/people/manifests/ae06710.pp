@@ -41,6 +41,7 @@ class people::ae06710 {
   # include postgres
   include java
   include php::5_4
+  include mysql
   include wget
   include zsh
   include heroku
