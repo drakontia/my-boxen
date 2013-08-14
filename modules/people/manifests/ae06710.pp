@@ -58,6 +58,7 @@ class people::ae06710 {
   sublime_text_2::package { 'Emmet':
     source => 'sergeche/emmet-sublime'
   }
+  include cyberduck
   include firefox
   include chrome
 

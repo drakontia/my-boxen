@@ -24,6 +24,11 @@ GITHUBTARBALL
     cinch (1.0.0)
 
 GITHUBTARBALL
+  remote: boxen/puppet-cyberduck
+  specs:
+    cyberduck (1.0.1)
+
+GITHUBTARBALL
   remote: boxen/puppet-dnsmasq
   specs:
     dnsmasq (1.0.0)
@@ -249,6 +254,7 @@ DEPENDENCIES
   boxen (= 3.0.1)
   chrome (= 1.1.0)
   cinch (= 1.0.0)
+  cyberduck (= 1.0.1)
   dnsmasq (= 1.0.0)
   dropbox (= 1.1.0)
   firefox (= 1.1.1)

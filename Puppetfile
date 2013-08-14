@@ -66,6 +66,7 @@ github "vagrant",        "2.0.10"
 github "sublime_text_2", "1.1.2"
 github "chrome",         "1.1.0"
 github "firefox",        "1.1.1"
+github "cyberduck",      "1.0.1"
 github "omnigraffle",    "1.2.0"
 
 # local application for utility
