@@ -55,6 +55,8 @@ github "mysql",          "1.1.0" # via homebrew
 github "postgresql",     "2.0.0" # via homebrew
 github "phantomjs",      "2.0.2" # via homebrew
 github "imagemagick",    "1.2.0" # via homebrew
+github "pow",            "1.0.0"
+
 
 # local application for develop
 github "postgresapp",    "1.0.0"
