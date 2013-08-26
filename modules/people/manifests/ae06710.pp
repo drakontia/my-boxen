@@ -47,6 +47,7 @@ class people::ae06710 {
   include zsh
   include heroku
   include phantomjs
+  phantomjs::version { '1.9.1': }
   include imagemagick
 
   # local application for develop
