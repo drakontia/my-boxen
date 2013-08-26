@@ -88,6 +88,7 @@ class people::ae06710 {
       'tig',
       'git-extras',
       'z',
+      'qt', # to compile capybara-webkit gem
       'ec2-api-tools',
       'ec2-ami-tools'
       # 'coreuilts', # i forget what is this?
