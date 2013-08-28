@@ -55,6 +55,7 @@ github "mysql",          "1.1.0" # via homebrew
 github "postgresql",     "2.0.0" # via homebrew
 github "phantomjs",      "2.0.2" # via homebrew
 github "imagemagick",    "1.2.0" # via homebrew
+github "qt",             "1.0.1" # use for capybara-webkit
 github "pow",            "1.0.0"
 
 
