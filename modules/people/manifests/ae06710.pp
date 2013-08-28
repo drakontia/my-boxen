@@ -56,6 +56,12 @@ class people::ae06710 {
   include sequel_pro
   include virtualbox
   include vagrant
+  vagrant::box { 'centos64/virtualbox':
+    source => 'http://developer.nrel.gov/downloads/vagrant-boxes/CentOS-6.4-x86_64-v20130427.box'
+  }
+  vagrant::box { 'ubuntu1210/virtualbox':
+    source => 'http://cloud-images.ubuntu.com/quantal/current/quantal-server-cloudimg-vagrant-amd64-disk1.box'
+  }
   include iterm2::stable
   include sublime_text_2
   sublime_text_2::package { 'Emmet':
