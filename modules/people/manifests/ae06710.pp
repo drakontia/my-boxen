@@ -56,6 +56,7 @@ class people::ae06710 {
   include sequel_pro
   include virtualbox
   include vagrant
+  vagrant::plugin { 'vagrant-aws': }
   vagrant::box { 'centos64/virtualbox':
     source => 'http://developer.nrel.gov/downloads/vagrant-boxes/CentOS-6.4-x86_64-v20130427.box'
   }
