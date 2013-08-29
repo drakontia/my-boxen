@@ -37,7 +37,7 @@ class people::ae06710 {
   include osx::no_network_dsstores # disable creation of .DS_Store files on network shares
   include osx::software_update # download and install software updates
 
-  # lib
+  ## lib
   # include postgres
   include java
   include php::5_4
@@ -50,6 +50,18 @@ class people::ae06710 {
   phantomjs::version { '1.9.1': }
   include imagemagick
 
+  # ruby
+  ruby::gem { "chef for 2.0.0-p247":
+    gem     => 'chef',
+    ruby    => '2.0.0-p247'
+  }
+  ruby::gem { "knife-solo for 2.0.0-p247":
+    gem     => 'knife-solo',
+    ruby    => '2.0.0-p247'
+  }
+
+
+  ## application
   # local application for develop
   include postgresapp
   include pgadmin3
