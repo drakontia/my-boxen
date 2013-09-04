@@ -40,7 +40,14 @@ class people::ae06710 {
   ## lib
   # include postgres
   include java
-  include php::5_4
+  include php::5_4_17
+  include php::fpm::5_4_17
+  # php::extension::pgsql { 'pgsql for 5.4.17':
+  #   php => '5.4.17'
+  # }
+  php::extension::pdo_dblib { 'pdo_dblib for 5.4.17':
+    php => '5.4.17'
+  }
   include mysql
   include pow
   include wget
