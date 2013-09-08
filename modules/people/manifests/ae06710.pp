@@ -48,6 +48,12 @@ class people::ae06710 {
   php::extension::pdo_dblib { 'pdo_dblib for 5.4.17':
     php => '5.4.17'
   }
+  php::extension::apc { 'apc for 5.4.17':
+    php => '5.4.17'
+  }
+  php::extension::xdebug { 'xdebug for 5.4.17':
+    php => '5.4.17'
+  }
   include mysql
   include pow
   include wget
@@ -117,8 +123,8 @@ class people::ae06710 {
       'git-extras',
       'z',
       'ec2-api-tools',
-      'ec2-ami-tools'
-      # 'coreuilts', # i forget what is this?
+      'ec2-ami-tools',
+      'coreuilts' # change mac command to like GNU Linux
       # 'ghc',
       # 'haskell-platform'
     ]:
@@ -151,7 +157,7 @@ class people::ae06710 {
     cwd => $dotfiles,
     creates => "${home}/.zshrc",
     require => Repository[$dotfiles],
-    notify  => Exec['submodule-clone'],
+    notify  => Exec['submodule-update'],
   }
   exec { "submodule-clone":
     cwd => $dotfiles,
@@ -159,5 +165,40 @@ class people::ae06710 {
     creates => "${home}/antigen/.env",
     require => Repository[$dotfiles],
   }
+
+  # composer installing
+  # $composer_target_dir = "${BOXEN_HOME}"
+  # $command_name  = 'composer'
+  # $user          = 'root'
+  # exec { 'composer-install':
+  #   cwd     => "${BOXEN_HOME}",
+  #   command => "mkdir ${BOXEN_HOME}/composer/bin && curl -sS https://getcomposer.org/installer | php",
+  #   unless  => "test -f ${composer_target_dir}/${composer_command_name}",
+  # }
+  # exec { 'composer-install':
+  #   command => "wget -O ${composer_command_name} ${::composer::params::phar_location}",
+  #   path    => '/usr/bin:/bin:/usr/sbin:/sbin',
+  #   cwd     => $composer_target_dir,
+  #   user    => $composer_user,
+  #   unless  => "test -f ${composer_target_dir}/${composer_command_name}",
+  # }
+
+  # exec { 'composer-fix-permissions':
+  #     command => "chmod a+x ${composer_command_name}",
+  #   path    => '/usr/bin:/bin:/usr/sbin:/sbin',
+  #   cwd     => $composer_target_dir,
+  #   user    => $composer_user,
+  #   unless  => "test -x ${composer_target_dir}/${composer_command_name}",
+  #   require => Exec['composer-install'],
+  # }
+
+  # if $auto_update {
+  #     exec { 'composer-update':
+  #       command => "${composer_command_name} self-update",
+  #       path    => "/usr/bin:/bin:/usr/sbin:/sbin:${composer_target_dir}",
+  #       user    => $composer_user,
+  #       require => Exec['composer-fix-permissions'],
+  #   }
+  # }
 
 }
