@@ -42,9 +42,9 @@ class people::ae06710 {
   include java
   include php::5_4_17
   include php::fpm::5_4_17
-  # php::extension::pgsql { 'pgsql for 5.4.17':
-  #   php => '5.4.17'
-  # }
+  php::extension::pgsql { 'pgsql for 5.4.17':
+    php => '5.4.17'
+  }
   php::extension::pdo_dblib { 'pdo_dblib for 5.4.17':
     php => '5.4.17'
   }
@@ -124,7 +124,7 @@ class people::ae06710 {
       'z',
       'ec2-api-tools',
       'ec2-ami-tools',
-      'coreuilts' # change mac command to like GNU Linux
+      'coreutils' # change mac command to like GNU Linux
       # 'ghc',
       # 'haskell-platform'
     ]:
@@ -132,16 +132,13 @@ class people::ae06710 {
 
   # local application
   package {
-    # develop
-    # if you want to use php. use xhprof for performance check
-
-    # utility
+    # TODO:if you want to use php. use xhprof for performance check
     'XtraFinder':
       source   => "http://www.trankynam.com/xtrafinder/downloads/XtraFinder.dmg",
       provider => pkgdmg;
-    'Language Switcher':
-      source   => 'http://www.tj-hd.co.uk/downloads/Language_Switcher_1_1_7.dmg',
-      provider => pkgdmg;
+    # 'Language Switcher':
+    #   source   => 'http://www.tj-hd.co.uk/downloads/Language_Switcher_1_1_7.dmg',
+    #   provider => pkgdmg;
   }
 
 
@@ -151,54 +148,53 @@ class people::ae06710 {
 
   repository { $dotfiles:
     source  => 'ae06710/dotfiles'
-    # require => File[$my]
   }
-  exec { "sh ${dotfiles}/setup.sh":
+  exec { "dotfile-setup":
     cwd => $dotfiles,
+    command => 'sh ${dotfiles}/setup.sh',
     creates => "${home}/.zshrc",
     require => Repository[$dotfiles],
-    notify  => Exec['submodule-update'],
+    notify  => Exec['dotfile-submodule-update'],
   }
-  exec { "submodule-clone":
+  exec { "dotfile-submodule-update":
     cwd => $dotfiles,
     command => 'git submodule init && git submodule update',
-    creates => "${home}/antigen/.env",
-    require => Repository[$dotfiles],
+    creates => "${dotfiles}/antigen/.env",
   }
 
-  # composer installing
-  # $composer_target_dir = "${BOXEN_HOME}"
-  # $command_name  = 'composer'
-  # $user          = 'root'
-  # exec { 'composer-install':
-  #   cwd     => "${BOXEN_HOME}",
-  #   command => "mkdir ${BOXEN_HOME}/composer/bin && curl -sS https://getcomposer.org/installer | php",
-  #   unless  => "test -f ${composer_target_dir}/${composer_command_name}",
-  # }
-  # exec { 'composer-install':
-  #   command => "wget -O ${composer_command_name} ${::composer::params::phar_location}",
-  #   path    => '/usr/bin:/bin:/usr/sbin:/sbin',
-  #   cwd     => $composer_target_dir,
-  #   user    => $composer_user,
-  #   unless  => "test -f ${composer_target_dir}/${composer_command_name}",
-  # }
+  ## composer installing
+  # -----
+  # TODO: need something solution.
+  # boxen use system php version.
+  # but composer need php.ini. so we cant install composer 
+  # by boxen
+  # if i can use `phpenv local 5.4.17`, install composer
+  # -----
+  #
+  # $composer_target_dirs = ["${::boxen_home}/composer",
+  #                          "${::boxen_home}/composer/bin"]
+  # $composer_target_dir = "${::boxen_home}/composer/bin"
+  # $composer_command_name = "composer.phar"
 
-  # exec { 'composer-fix-permissions':
-  #     command => "chmod a+x ${composer_command_name}",
-  #   path    => '/usr/bin:/bin:/usr/sbin:/sbin',
+  # file { $composer_target_dirs:
+  #   ensure => "directory"
+  # }
+  # exec { 'composer-install':
+  #   command => "curl -sS https://getcomposer.org/installer | php",
   #   cwd     => $composer_target_dir,
-  #   user    => $composer_user,
+  #   creates => "${composer_target_dir}/${composer_command_name}",
+  #   unless  => "test -f ${composer_target_dir}/${composer_command_name}",
+  #   require => File[$composer_target_dir],
+  # }
+  # exec { 'composer-fix-permissions':
+  #   command => "chmod a+x ${composer_command_name}",
+  #   cwd     => $composer_target_dir,
   #   unless  => "test -x ${composer_target_dir}/${composer_command_name}",
   #   require => Exec['composer-install'],
   # }
-
-  # if $auto_update {
-  #     exec { 'composer-update':
-  #       command => "${composer_command_name} self-update",
-  #       path    => "/usr/bin:/bin:/usr/sbin:/sbin:${composer_target_dir}",
-  #       user    => $composer_user,
-  #       require => Exec['composer-fix-permissions'],
-  #   }
+  # exec { 'composer-update':
+  #   command => "${composer_command_name} self-update",
+  #   require => Exec['composer-fix-permissions'],
   # }
 
 }
