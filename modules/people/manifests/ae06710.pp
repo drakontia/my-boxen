@@ -64,6 +64,10 @@ class people::ae06710 {
   include imagemagick
 
   # ruby
+  ruby::gem { "git-issue for 2.0.0-p247":
+    gem     => 'git-issue',
+    ruby    => '2.0.0-p247'
+  }
   ruby::gem { "chef for 2.0.0-p247":
     gem     => 'chef',
     ruby    => '2.0.0-p247'
