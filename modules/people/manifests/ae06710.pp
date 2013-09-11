@@ -128,7 +128,8 @@ class people::ae06710 {
       'z',
       'ec2-api-tools',
       'ec2-ami-tools',
-      'coreutils' # change mac command to like GNU Linux
+      'coreutils', # change mac command to like GNU Linux
+      'putty'
       # 'ghc',
       # 'haskell-platform'
     ]:
