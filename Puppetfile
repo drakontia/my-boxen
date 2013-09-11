@@ -43,7 +43,7 @@ github "osx",            "1.6.0"
 
 # lib
 github "java",           "1.1.0"
-github "php",            "1.1.2", :repo => "ae06710/puppet-php"
+github "php",            "1.1.1" # , :repo => "ae06710/puppet-php"
 github "libtool",        "1.0.0" # use for php
 github "pkgconfig",      "1.0.0" # use for php
 github "pcre",           "1.0.0" # use for php

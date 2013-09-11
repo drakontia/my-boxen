@@ -40,20 +40,22 @@ class people::ae06710 {
   ## lib
   # include postgres
   include java
+  # php::version { '5.1.5': }
+  # php::version { '5.1.6': }
   include php::5_4_17
-  include php::fpm::5_4_17
-  php::extension::pgsql { 'pgsql for 5.4.17':
-    php => '5.4.17'
-  }
-  php::extension::pdo_dblib { 'pdo_dblib for 5.4.17':
-    php => '5.4.17'
-  }
-  php::extension::apc { 'apc for 5.4.17':
-    php => '5.4.17'
-  }
-  php::extension::xdebug { 'xdebug for 5.4.17':
-    php => '5.4.17'
-  }
+  # include php::fpm::5_4_17
+  # php::extension::pgsql { 'pgsql for 5.4.17':
+  #   php => '5.4.17'
+  # }
+  # php::extension::pdo_dblib { 'pdo_dblib for 5.4.17':
+  #   php => '5.4.17'
+  # }
+  # php::extension::apc { 'apc for 5.4.17':
+  #   php => '5.4.17'
+  # }
+  # php::extension::xdebug { 'xdebug for 5.4.17':
+  #   php => '5.4.17'
+  # }
   include mysql
   include pow
   include wget
@@ -116,6 +118,7 @@ class people::ae06710 {
 
 
   # via homebrew
+  homebrew::tap { 'homebrew/binary': }
   package {
     [
       'readline', # use for rails
@@ -129,7 +132,8 @@ class people::ae06710 {
       'ec2-api-tools',
       'ec2-ami-tools',
       'coreutils', # change mac command to like GNU Linux
-      'putty'
+      'putty', # use convert ppk key to OpenSSH format
+      'packer' # vagrant box maker
       # 'ghc',
       # 'haskell-platform'
     ]:
