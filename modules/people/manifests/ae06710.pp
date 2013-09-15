@@ -57,7 +57,7 @@ class people::ae06710 {
   #   php => '5.4.17'
   # }
   include mysql
-  include pow
+  # include pow
   include wget
   include zsh
   include heroku
@@ -129,6 +129,7 @@ class people::ae06710 {
       'tig',
       'git-extras',
       'z',
+      'the_silver_searcher',
       'ec2-api-tools',
       'ec2-ami-tools',
       'coreutils', # change mac command to like GNU Linux
