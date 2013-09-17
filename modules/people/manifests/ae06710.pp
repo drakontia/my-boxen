@@ -103,6 +103,7 @@ class people::ae06710 {
   include cyberduck
   include firefox
   include chrome
+  include chrome::canary
 
   # local application for utility
   include dropbox
