@@ -135,7 +135,8 @@ class people::ae06710 {
       'ec2-ami-tools',
       'coreutils', # change mac command to like GNU Linux
       'putty', # use convert ppk key to OpenSSH format
-      'packer' # vagrant box maker
+      'packer', # vagrant box maker
+      'graphviz'
       # 'ghc',
       # 'haskell-platform'
     ]:

@@ -1,7 +1,7 @@
 GITHUBTARBALL
   remote: boxen/puppet-alfred
   specs:
-    alfred (1.1.2)
+    alfred (1.1.4)
 
 GITHUBTARBALL
   remote: boxen/puppet-autoconf
@@ -259,7 +259,7 @@ GITHUBTARBALL
     stdlib (4.1.0)
 
 DEPENDENCIES
-  alfred (= 1.1.2)
+  alfred (= 1.1.4)
   autoconf (= 1.0.0)
   boxen (= 3.0.1)
   chrome (= 1.1.0)
