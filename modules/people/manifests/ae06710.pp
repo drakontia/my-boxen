@@ -92,9 +92,6 @@ class people::ae06710 {
   # vagrant::box { 'centos64/virtualbox':
   #   source => 'http://developer.nrel.gov/downloads/vagrant-boxes/CentOS-6.4-x86_64-v20130427.box'
   # }
-  # vagrant::box { 'ubuntu1210/virtualbox':
-  #   source => 'http://cloud-images.ubuntu.com/quantal/current/quantal-server-cloudimg-vagrant-amd64-disk1.box'
-  # }
   include iterm2::stable
   include sublime_text_2
   sublime_text_2::package { 'Emmet':
@@ -106,6 +103,7 @@ class people::ae06710 {
   include chrome::canary
 
   # local application for utility
+  include xtrafinder
   include dropbox
   include skype
   include hipchat
@@ -143,15 +141,18 @@ class people::ae06710 {
   }
 
   # local application
-  package {
-    # TODO:if you want to use php. use xhprof for performance check
-    'XtraFinder':
-      source   => "http://www.trankynam.com/xtrafinder/downloads/XtraFinder.dmg",
-      provider => pkgdmg;
+  package { 'XtraFinder':
+    provider => pkgdmg,
+    source   => "http://www.trankynam.com/xtrafinder/downloads/XtraFinder.dmg",
+  }
+  # package { 'Sigil-0.7.2-Mac-Package.dmg':
+  #   provider => pkgdmg,
+  #   ensure => installed,
+  #   source   => 'https://sigil.googlecode.com/files/Sigil-0.7.2-Mac-Package.dmg',
+  # }
     # 'Language Switcher':
     #   source   => 'http://www.tj-hd.co.uk/downloads/Language_Switcher_1_1_7.dmg',
     #   provider => pkgdmg;
-  }
 
 
   # dotfile setting

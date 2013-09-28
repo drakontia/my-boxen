@@ -73,6 +73,7 @@ github "cyberduck",      "1.0.1"
 github "omnigraffle",    "1.2.0"
 
 # local application for utility
+github "xtrafinder",     "1.0.1"
 github "dropbox",        "1.1.0"
 github "skype",          "1.0.2"
 github "hipchat",        "1.0.7"
