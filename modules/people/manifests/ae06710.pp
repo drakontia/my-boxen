@@ -89,6 +89,7 @@ class people::ae06710 {
   include vagrant
   vagrant::plugin { 'vagrant-aws': }
   vagrant::plugin { 'vagrant-berkshelf': }
+  vagrant::plugin { 'vagrant-omnibus': }
   # vagrant::box { 'centos64/virtualbox':
   #   source => 'http://developer.nrel.gov/downloads/vagrant-boxes/CentOS-6.4-x86_64-v20130427.box'
   # }

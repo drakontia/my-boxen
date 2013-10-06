@@ -244,6 +244,11 @@ GITHUBTARBALL
     xquartz (1.1.0)
 
 GITHUBTARBALL
+  remote: boxen/puppet-xtrafinder
+  specs:
+    xtrafinder (1.0.1)
+
+GITHUBTARBALL
   remote: boxen/puppet-zsh
   specs:
     zsh (1.0.0)
@@ -311,5 +316,6 @@ DEPENDENCIES
   vlc (= 1.0.3)
   wget (= 1.0.0)
   xquartz (= 1.1.0)
+  xtrafinder (= 1.0.1)
   zsh (= 1.0.0)
 
