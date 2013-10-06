@@ -127,6 +127,7 @@ class people::ae06710 {
       'reattach-to-user-namespace', # use tmux to clipbord
       'tree',
       'proctools', # kill by process name. like $ pkill firefox
+      'ctags',
       'tig',
       'git-extras',
       'z',
