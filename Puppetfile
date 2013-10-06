@@ -53,6 +53,7 @@ github "zsh",            "1.0.0" # via homebrew
 github "heroku",         "2.0.0"
 github "mysql",          "1.1.0" # via homebrew
 github "postgresql",     "2.0.0" # via homebrew
+github "redis",          "0.3.0"
 github "phantomjs",      "2.0.2" # via homebrew
 github "imagemagick",    "1.2.0" # via homebrew
 github "qt",             "1.0.1" # use for capybara-webkit

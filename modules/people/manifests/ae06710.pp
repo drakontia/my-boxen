@@ -57,6 +57,7 @@ class people::ae06710 {
   #   php => '5.4.17'
   # }
   include mysql
+  include redis
   # include pow
   include wget
   include zsh
