@@ -79,6 +79,10 @@ class people::ae06710 {
     gem     => 'knife-solo',
     ruby    => '2.0.0-p247'
   }
+  ruby::gem { "rubocop for 2.0.0-p247":
+    gem     => 'rubocop',
+    ruby    => '2.0.0-p247'
+  }
 
 
   ## application
