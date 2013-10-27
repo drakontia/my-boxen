@@ -41,7 +41,6 @@ class people::ae06710 {
 
   ## lib
   #
-  include postgresql
   include java
   include php::5_4_17
   # include php::fpm::5_4_17
@@ -57,6 +56,7 @@ class people::ae06710 {
   # php::extension::xdebug { 'xdebug for 5.4.17':
   #   php => '5.4.17'
   # }
+  include postgresql
   include mysql
   include redis
   include wget
