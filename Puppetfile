@@ -56,13 +56,14 @@ github "zsh",            "1.0.0"
 github "heroku",         "2.0.0"
 github "mysql",          "1.1.5"
 github "postgresql",     "2.0.1"
+github "sysctl",         "1.0.0" # use for postgresql
 github "redis",          "0.3.0"
 github "phantomjs",      "2.0.2"
 # github "pow",            "1.0.0"
 
 
 # local application for develop
-github "postgresapp",    "1.0.0"
+# github "postgresapp",    "1.0.0"
 github "pgadmin3",       "1.0.0"
 github "sequel_pro",     "1.0.1"
 github "iterm2",         "1.0.3"

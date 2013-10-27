@@ -41,7 +41,7 @@ class people::ae06710 {
 
   ## lib
   #
-  # include postgres
+  include postgresql
   include java
   include php::5_4_17
   # include php::fpm::5_4_17
@@ -87,7 +87,7 @@ class people::ae06710 {
 
   ## local application for develop
   #
-  include postgresapp
+  # include postgresapp
   include pgadmin3
   include sequel_pro
   include virtualbox
