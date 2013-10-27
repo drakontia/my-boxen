@@ -63,7 +63,7 @@ class people::ae06710 {
   include zsh
   include imagemagick
   include phantomjs
-  phantomjs::version { '1.9.1': }
+  phantomjs::version { '1.9.2': }
   include heroku
 
   # ruby
