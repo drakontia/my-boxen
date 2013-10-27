@@ -29,6 +29,12 @@ and detect most of these and tell you anyway):
 * Boxen __may not__ play nice with an existing nvm install.
 * Boxen __recommends__ installing the full Xcode.
 
+if you dont have Xcode Command Line Tools, do this
+
+```bash
+$ xcode-select --install
+```
+
 ### Dependencies
 
 **Install the Xcode Command Lines Tools and/or full Xcode.**
