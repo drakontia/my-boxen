@@ -142,6 +142,14 @@ class people::ae06710 {
     ]:
   }
 
+  ## packages
+  #
+  package {
+   'ClamXav':
+      source   => "http://www.clamxav.com/downloads/ClamXav_2.6.1.dmg",
+      provider => appdmg;
+  }
+
   ## dotfile setting
   #
   $home     = "/Users/${::boxen_user}"
