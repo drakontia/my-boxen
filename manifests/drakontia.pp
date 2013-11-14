@@ -45,7 +45,7 @@ class people::{GITHUB_ACCOUNT_NAME} {
   include mysql
   include postgres
   include wget
-  # include zsh
+  include zsh
   include heroku
   # include phantomjs
   include imagemagick
@@ -77,7 +77,11 @@ class people::{GITHUB_ACCOUNT_NAME} {
       'proctools', # kill by process name. like $ pkill firefox
       'tig',
       'git-extras',
-      'z'
+      'z',
+			'ctags',
+			'vim':
+				install_options => {'--with-lua'},
+			'bash-completion'
       #'ec2-api-tools',
       #'ec2-ami-tools'
     ]:
@@ -103,7 +107,7 @@ class people::{GITHUB_ACCOUNT_NAME} {
   }
   exec { "sh ${dotfiles}/setup.sh":
     cwd => $dotfiles,
-    creates => "${home}/.bashrc",
+    #creates => "${home}/.bashrc",
     require => Repository[$dotfiles],
     notify  => Exec['submodule-clone'],
   }

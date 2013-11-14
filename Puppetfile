@@ -52,7 +52,7 @@ github "wget",           "1.0.0"
 github "imagemagick",    "1.2.1"
 github "vagrant",        "3.0.0"
 github "qt",             "1.0.1" # use for capybara-webkit
-# github "zsh",            "1.0.0"
+github "zsh",            "1.0.0"
 github "heroku",         "2.1.1"
 github "mysql",          "1.1.5"
 github "postgresql",     "2.0.1"
@@ -63,7 +63,7 @@ github "redis",          "0.3.0"
 
 
 # local application for develop
-# github "postgresapp",    "1.0.0"
+github "postgresapp",    "1.0.0"
 github "pgadmin3",       "1.0.0"
 github "sequel_pro",     "1.0.1"
 # github "iterm2",         "1.0.3"
@@ -73,7 +73,6 @@ github "chrome",         "1.1.0"
 github "firefox",        "1.1.4"
 github "cyberduck",      "1.0.1"
 # github "omnigraffle",    "1.2.0"
-github "macvim",         "1.0.0"
 github "evernote",       "2.0.4"
 github "skitch",         "1.0.2"
 
