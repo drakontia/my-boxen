@@ -34,8 +34,10 @@ class people::{GITHUB_ACCOUNT_NAME} {
   include osx::universal_access::enable_scrollwheel_zoom
 
   # Miscellaneous
-  include osx::no_network_dsstores # disable creation of .DS_Store files on network shares
-  include osx::software_update # download and install software updates
+  # disable creation of .DS_Store files on network shares
+  include osx::no_network_dsstores
+  # download and install software updates
+  include osx::software_update
 
   # include turn-off-dashboard
 
@@ -66,7 +68,6 @@ class people::{GITHUB_ACCOUNT_NAME} {
   include alfred
   include vlc
 
-
   # via homebrew
   package {
     [
@@ -78,24 +79,14 @@ class people::{GITHUB_ACCOUNT_NAME} {
       'tig',
       'git-extras',
       'z',
-			'ctags',
-			'vim':
-				install_options => {'--with-lua'},
-			'bash-completion'
-      #'ec2-api-tools',
-      #'ec2-ami-tools'
+      'ctags',
+      'bash-completion'
     ]:
   }
 
-  # local application
-  package {
-    # utility
-    'XtraFinder':
-      source   => "http://www.trankynam.com/xtrafinder/downloads/XtraFinder.dmg",
-      provider => pkgdmg;
+  package { 'vim':
+    install_options => ['--with-lua'];
   }
-
-
 
   # dotfile setting
   $home     = "/Users/${::boxen_user}"
@@ -107,13 +98,6 @@ class people::{GITHUB_ACCOUNT_NAME} {
   }
   exec { "sh ${dotfiles}/setup.sh":
     cwd => $dotfiles,
-    #creates => "${home}/.bashrc",
-    require => Repository[$dotfiles],
-    notify  => Exec['submodule-clone'],
-  }
-  exec { "submodule-clone":
-    cwd => $dotfiles,
-    command => 'git submodule init && git submodule update'
-    require => Repository[$dotfiles],
+    require => Repository[$dotfiles]
   }
 }
