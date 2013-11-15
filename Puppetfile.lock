@@ -11,7 +11,7 @@ GITHUBTARBALL
 GITHUBTARBALL
   remote: boxen/puppet-boxen
   specs:
-    boxen (3.0.1)
+    boxen (3.3.4)
 
 GITHUBTARBALL
   remote: boxen/puppet-chrome
@@ -71,7 +71,7 @@ GITHUBTARBALL
 GITHUBTARBALL
   remote: boxen/puppet-homebrew
   specs:
-    homebrew (1.4.1)
+    homebrew (1.5.1)
 
 GITHUBTARBALL
   remote: boxen/puppet-hub
@@ -121,7 +121,7 @@ GITHUBTARBALL
 GITHUBTARBALL
   remote: boxen/puppet-nodejs
   specs:
-    nodejs (3.2.9)
+    nodejs (3.3.0)
 
 GITHUBTARBALL
   remote: boxen/puppet-openssl
@@ -181,7 +181,7 @@ GITHUBTARBALL
 GITHUBTARBALL
   remote: boxen/puppet-ruby
   specs:
-    ruby (6.3.0)
+    ruby (6.7.2)
 
 GITHUBTARBALL
   remote: boxen/puppet-sequel_pro
@@ -274,7 +274,7 @@ DEPENDENCIES
   mou (= 1.1.3)
   mysql (= 1.1.5)
   nginx (= 1.4.2)
-  nodejs (= 3.2.9)
+  nodejs (= 3.3.0)
   openssl (= 1.0.0)
   osx (= 1.6.0)
   pcre (= 1.0.0)
