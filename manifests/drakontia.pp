@@ -1,4 +1,4 @@
-class people::{GITHUB_ACCOUNT_NAME} {
+class people::drakontia {
   ## osx
   # Finder
   include osx::finder::unhide_library
@@ -49,7 +49,7 @@ class people::{GITHUB_ACCOUNT_NAME} {
   include wget
   include zsh
   include heroku
-  # include phantomjs
+  include phantomjs
   include imagemagick
 
   # local application for develop

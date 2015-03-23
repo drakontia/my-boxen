@@ -29,7 +29,7 @@ end
 # Includes many of our custom types and providers, as well as global
 # config. Required.
 
-github "boxen",      "3.3.4"
+github "boxen",      "3.10.1"
 
 # Core modules for a basic development environment. You can replace
 # some/most of these if you want, but it's not recommended.
@@ -58,7 +58,7 @@ github "xquartz",    "1.1.0"
 
 ## custmize
 #
-github "osx",            "2.0.0"
+github "osx",            "2.8.0"
 
 # lib
 github "java",           "1.1.0"
@@ -77,7 +77,7 @@ github "mysql",          "1.1.5"
 github "postgresql",     "2.0.1"
 github "sysctl",         "1.0.0" # use for postgresql
 github "redis",          "0.3.0"
-# github "phantomjs",      "2.0.2"
+github "phantomjs",      "2.0.2"
 # github "pow",            "1.0.0"
 
 
