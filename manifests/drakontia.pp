@@ -53,20 +53,9 @@ class people::drakontia {
   include imagemagick
 
   # local application for develop
-  include postgresapp
-  include pgadmin3
   include sequel_pro
+	include virtualbox
   include vagrant
-  include firefox
-  include chrome
-  include cyberduck
-
-  # local application for utility
-  include dropbox
-  include skype
-  include hipchat
-  include alfred
-  include vlc
 
   # via homebrew
   package {
@@ -94,7 +83,7 @@ class people::drakontia {
 
   repository { $dotfiles:
     source  => '${::boxen_user}/dotfiles'
-    require => File[$home]
+#    require => File[$home]
   }
   exec { "sh ${dotfiles}/setup.sh":
     cwd => $dotfiles,

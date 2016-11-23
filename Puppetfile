@@ -47,13 +47,13 @@ github "go",          "2.1.0"
 github "homebrew",    "2.1.0"
 github "hub",         "1.4.4"
 github "inifile",     "1.4.1", :repo => "puppetlabs/puppetlabs-inifile"
-github "nginx",       "1.7.0"
+github "nginx",       "1.8.0"
 github "nodejs",      "5.0.8"
 github "openssl",     "1.0.0"
 github "phantomjs",   "3.0.0"
 github "pkgconfig",   "1.0.0"
 github "repository",  "2.4.1"
-github "ruby",        "8.5.4"
+github "ruby",        "8.5.6"
 github "stdlib",      "4.7.0", :repo => "puppetlabs/puppetlabs-stdlib"
 github "sudo",        "1.0.0"
 github "xquartz",     "1.2.1"
@@ -66,47 +66,27 @@ github "xquartz",     "1.2.1"
 github "osx",            "2.8.0"
 
 # lib
-github "java",           "1.1.0"
-github "php",            "1.1.4"
+github "java",           "1.8.4"
+github "php",            "2.0.1"
 github "libtool",        "1.0.0" # use for php
 github "pkgconfig",      "1.0.0" # use for php
 github "pcre",           "1.0.0" # use for php
 github "libpng",         "1.0.0" # use for php
 github "wget",           "1.0.0"
-github "imagemagick",    "1.2.1"
-github "vagrant",        "3.0.0"
-github "qt",             "1.0.1" # use for capybara-webkit
-github "zsh",            "1.0.0"
+github "imagemagick",    "1.3.0"
+github "vagrant",        "3.3.4"
+github "qt",             "1.4.0" # use for capybara-webkit
+github "zsh",            "1.0.1"
 github "heroku",         "2.1.1"
-github "mysql",          "1.1.5"
-github "postgresql",     "2.0.1"
-github "sysctl",         "1.0.0" # use for postgresql
-github "redis",          "0.3.0"
-github "phantomjs",      "2.0.2"
-# github "pow",            "1.0.0"
-
+github "mysql",          "2.2.3"
+github "postgresql",     "5.0.0"
+github "sysctl",         "1.0.1" # use for postgresql
+github "redis",          "4.0.2"
+github "phantomjs",      "3.0.0"
+github "pow",            "2.3.2"
 
 # local application for develop
-github "postgresapp",    "1.0.0"
-github "pgadmin3",       "1.0.0"
-github "sequel_pro",     "1.0.1"
-# github "iterm2",         "1.0.3"
-# github "virtualbox",     "1.0.7"
-# github "sublime_text_2", "1.1.2"
-# github "chrome",         "1.1.0"
-github "firefox",        "1.1.4"
-github "cyberduck",      "1.0.1"
-# github "omnigraffle",    "1.2.0"
-github "skitch",         "1.0.2"
-
-# local application for utility
-github "dropbox",        "1.1.2"
-github "skype",          "1.0.6"
-github "hipchat",        "1.0.8"
-github "alfred",         "1.1.6"
-# github "mou",            "1.1.3"
-github "vlc",            "1.0.5"
-# github "flux",           "1.0.0"
-# github "cinch",          "1.0.0"
-# github "fluid",          "1.0.0"
-
+github "iterm2",         "1.2.5"
+github "virtualbox",     "1.0.13"
+github "sublime_text_2", "1.1.2"
+github "omnigraffle",    "1.3.1"
